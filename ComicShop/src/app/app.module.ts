@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
+import { CarrouselComponent } from './carrousel/carrousel.component';
 
 
 
@@ -25,6 +26,7 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     AboutUsComponent,
     CardHQComponent,
+    CarrouselComponent,
   ],
   imports: [
     BrowserModule,
