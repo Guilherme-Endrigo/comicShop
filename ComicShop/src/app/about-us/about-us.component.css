@@ -1,0 +1,8 @@
+.aboutBackground {
+  display: flex;
+  width: 100vw;
+  height: 60vh;
+  left: 0px;
+  top: 401px;
+  background: rgb(180, 179, 179);
+}

@@ -6,22 +6,25 @@ a {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 mat-icon {
   color: #ffffff;
 }
 
+mat-form-field {
+  width: 175px;
+}
+
 #logo {
-  width: 150px;
-  height: 60px;
+  width: 130px;
+  height: 50px;
 }
 
 nav {
   position: absolute;
   width: 100vw;
-  height: 12vh;
   left: 0px;
   top: 0px;
   background: #000000;
@@ -35,7 +38,7 @@ nav {
 }
 
 #quadrinho {
-  margin: 100px;
+  margin: 5vw;
 }
 
 #personagens {
@@ -43,10 +46,11 @@ nav {
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .optionMenu {
+  display: flex;
   float: right;
   align-items: center;
 }
@@ -55,29 +59,81 @@ nav {
   padding-right: 50px;
 }
 
-#cleanButton {
-  color: #ffffff;
-  margin-right: 25px;
-}
-
 .searchInput {
   color: #ffffff;
 }
 
 #searchLabel {
-  font-size: large;
+  font-size: medium;
   color: #ffffff;
 }
 
 #user {
-  margin-left: 50px;
+  margin-left: 25px;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 #shopCar {
   margin-right: 50px;
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
+}
+
+@media (max-width: 1000px) {
+  .optionMenu {
+    float: left;
+  }
+}
+
+@media (max-width: 520px) {
+  #logo {
+    width: 50px;
+    height: 20px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  #personagens {
+    font-size: 15px;
+  }
+
+  #user {
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  #iconSearch {
+    padding-right: 30px;
+  }
+  #quadrinho {
+    margin: 2vw;
+  }
+
+  #shopCar {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 350px) {
+    a {
+      font-size: 12px;
+    }
+
+    #personagens {
+      font-size: 12px;
+    }
+
+    #searchLabel {
+      font-size: x-small;
+      color: #ffffff;
+    }
+
+    mat-form-field {
+      width: 125px;
+    }
+  }
 }
