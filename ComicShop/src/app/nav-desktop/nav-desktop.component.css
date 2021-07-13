@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+mat-icon {
+  color: #ffffff;
+}
+
+#logo {
+  width: 150px;
+  height: 60px;
+}
+
+nav {
+  position: absolute;
+  width: 100vw;
+  height: 12vh;
+  left: 0px;
+  top: 0px;
+  background: #000000;
+}
+
+.pagesMenu {
+  float: left;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+#quadrinho {
+  margin: 100px;
+}
+
+#personagens {
+  color: #ffffff;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.optionMenu {
+  float: right;
+  align-items: center;
+}
+
+#iconSearch {
+  padding-right: 50px;
+}
+
+#cleanButton {
+  color: #ffffff;
+  margin-right: 25px;
+}
+
+.searchInput {
+  color: #ffffff;
+}
+
+#searchLabel {
+  font-size: large;
+  color: #ffffff;
+}
+
+#user {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#shopCar {
+  margin-right: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
