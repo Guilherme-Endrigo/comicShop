@@ -25,7 +25,6 @@ mat-form-field {
 nav {
   position: absolute;
   width: 100vw;
-  left: 0px;
   top: 0px;
   background: #000000;
 }

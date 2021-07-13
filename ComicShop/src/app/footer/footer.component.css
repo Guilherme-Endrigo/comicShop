@@ -1,0 +1,12 @@
+footer {
+  width: 100vw;
+  height: 15vh;
+  bottom: 0;
+  background: #ed1d24;
+}
+
+#logo {
+  width: 150px;
+  height: 50px;
+  float: right;
+}
