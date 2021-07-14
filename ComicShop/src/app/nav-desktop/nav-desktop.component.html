@@ -1,45 +1,5 @@
-<!-- <nav>
-  <div>
-    <ul>
-      <div class="pagesMenu">
-        <li>
-          <img id="logo" src="https://seeklogo.com/images/M/Marvel_Comics-logo-D489AEB9C1-seeklogo.com.png" alt="LogoMarvel">
-        </li>
-        <li>
-          <a id="quadrinho" href="#">QUADRINHOS</a>
-        </li>
-        <li>
-          <button id="personagens" mat-button [matMenuTriggerFor]="menu">PERSONAGENS</button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>HOMEM-ARANHA</button>
-            <button mat-menu-item>X-MEN</button>
-          </mat-menu>
-        </li>
-      </div>
-      
-      <div class="optionMenu">
-        <li>
-          <mat-icon id="iconSearch" aria-hidden="false" aria-label="search">search</mat-icon>
-          <mat-form-field class="searchInput" appearance="outline">
-            <mat-label id="searchLabel">O que você Procura?</mat-label>
-            <input matInput type="text" [(ngModel)]="value">
-            <button id="cleanButton" *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click) = "value=''">
-              <mat-icon>close</mat-icon>
-            </button>
-          </mat-form-field>
-
-          <mat-icon  id="user" aria-hidden="false" aria-label="search">account_circle</mat-icon>
-          <mat-icon id="shopCar" aria-hidden="false" aria-label="search">local_mall</mat-icon>
-
-        </li>
-      </div>
-
-    </ul>
-  </div>
-</nav> -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img class="navbar-brand" id="logo" src="https://seeklogo.com/images/M/Marvel_Comics-logo-D489AEB9C1-seeklogo.com.png" alt="LogoMarvel">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,29 +7,30 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">QUADRINHOS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          PERSONAGENS
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">HOMEM-ARANHA</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">X-MEN</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
     </ul>
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+
+    <a href=""></a>
+    <a href=""></a>
   </div>
 </nav>
