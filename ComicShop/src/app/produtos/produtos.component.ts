@@ -14,6 +14,7 @@ export class ProdutosComponent implements OnInit {
     imgPath: "../../assets/img/capa_exemploHQ.png",
     descricao: "Historia foda dos xman"
   },
+  
   {
     nome: "DIAS DE UM FUTURO ESQUECIDO",
     grupoHerois: "X-MAN",

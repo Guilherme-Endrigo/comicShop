@@ -8,13 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatCardModule} from '@angular/material/card';
 import { CarrouselComponent } from './carrousel/carrousel.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { BtnCreateAccountComponent } from './usuario/btn-create-account/btn-create-account.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,17 +23,16 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
     AboutUsComponent,
     CarrouselComponent,
     ProdutosComponent,
+    UsuarioComponent,
+    BtnCreateAccountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatCardModule
+    ModalModule.forRoot(),
+    ReactiveFormsModule
   ],
 
   providers: [],
