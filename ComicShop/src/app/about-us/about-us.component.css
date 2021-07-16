@@ -3,6 +3,10 @@ h3, p{
   color: black !important;
 }
 
-p{
-  font-size: 1.3rem;
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
 }
