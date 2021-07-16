@@ -14,6 +14,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { BtnCreateAccountComponent } from './usuario/btn-create-account/btn-create-account.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule, DatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     ModalModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ],
 
   providers: [],
