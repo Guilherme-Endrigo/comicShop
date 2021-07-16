@@ -1,44 +1,8 @@
-.aboutBackground {
-  display: flex;
-  width: 100vw;
-  height: 50vh;
-  left: 0px;
-  top: 401px;
-  background: rgb(180, 179, 179);
+h3, p{
+  font-family: "Roboto Condensed", sans-serif;
+  color: black !important;
 }
 
-.img-about {
-  margin-left: 80px;
-  padding: 20px 0 40px 30px;
-  height: auto;
-  display: flex;
+p{
+  font-size: 1.3rem;
 }
-
-
-.sobreNos{
-  padding: 100px 10 20px 40px;
-  display: flex;
-  text-align: center;
-}
-
-
-#text{ 
-  
-  display: flex;
-  margin-left: 100px;
-}
-
-#linha{
-  display: flex;
-  width: 100vw;
-  height: 50vh;
-  left: 0px;
-  top: 401px;
-  
-}
-
-.linha{
-  margin-left:50px;
-}
-
-
