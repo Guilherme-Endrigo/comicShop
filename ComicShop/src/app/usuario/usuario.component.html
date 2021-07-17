@@ -4,27 +4,22 @@
      <div class="col-md-8 col-lg-6">
        <div class="login d-flex align-items-center py-5">
          <div class="container">
-           <div class="row">
-             <div class="col-md-9 col-lg-8 mx-auto">
-               <h3 class="login-heading mb-4 text-center">LOGIN</h3>
+           <div class="row mt-5">
+             <div class="col-md-9 col-lg-8 mx-auto mt-5  shadow-lg p-3 mb-5 bg-white rounded mb-5 pb-5 pl-5 pr-5">
+               <h3 class="login-heading mt-5 mb-4 text-center">LOGIN</h3>
                <form>
                  <div class="form-label-group">
-                   <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                   <label for="inputEmail">Email address</label>
+                   <input type="email" id="inputEmail" class="form-control" placeholder="insira seu email" required autofocus>
                  </div>
  
-                 <div class="form-label-group">
-                   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                   <label for="inputPassword">Password</label>
+                 <div class="form-label-group mt-4 mb-2">
+                   <input type="password" id="inputPassword" class="form-control" placeholder="senha" required>
                  </div>
- 
-                 <div class="custom-control custom-checkbox mb-3">
-                   <input type="checkbox" class="custom-control-input" id="customCheck1">
-                   <label class="custom-control-label" for="customCheck1">Remember password</label>
-                 </div>
-                 <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+
+                 <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">entrar</button>
                  <div class="text-center">
-                   <a class="small" href="#">Cadastre-se</a></div>
+                  <app-btn-create-account (clienteCreated)="onUsuarioCreated($event)"></app-btn-create-account>
+                </div>
                </form>
              </div>
            </div>
