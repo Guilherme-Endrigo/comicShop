@@ -14,7 +14,7 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { UsuarioComponent } from '././components/usuario/usuario.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDatepickerModule, DatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { CharComponent } from './components/char-component/char-component.component';
 import { CharactersComponent } from './components/char-component/characters/characters.component';
 import { BtnCreateAccountComponent } from './components/usuario/btn-create-account/btn-create-account.component';

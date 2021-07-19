@@ -5,15 +5,15 @@
           <div class="row">
               <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" class="col-md-4" *ngFor="let quadrinho of allQuadrinhos | async">
                   <div class="card mt-4 hq-card">
-                    <h5 class="card-title mt-3">{{quadrinho.title}}</h5>
-                    <h6 class="card-subtitle mb-3 text-muted">{{quadrinho.issueNumber}}</h6>
-                      <img class="card-img-top img-responsive" src= {{quadrinho.thumbnail.path}}.{{quadrinho.thumbnail.extension}}>
+                    <!--<h5 class="card-title mt-3 ml-2">{{quadrinho.title}}</h5>-->
+                    <!-- <h6 class="card-subtitle mb-3 ml-2 text-muted">{{quadrinho.issueNumber}}</h6> -->
+                      <img class="card-img-top img-responsive mt-5" src= {{quadrinho.thumbnail.path}}.{{quadrinho.thumbnail.extension}}>
                       <!-- <p class="card-text">"{{quadrinho.description}}"</p> -->
+                      <h5 class="card-title mt-3 ml-2">{{quadrinho.title}}</h5>
                       <div class="card-body text-center">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                           <button class="btn btn-danger me-md-2" type="button">COMPRAR</button>
                         </div>
-                        <!--<app-bnt-create-agendamento [nomeServico]="servico.nome"></app-bnt-create-agendamento>-->
                       </div>
                   </div>
               </div>    
