@@ -1,12 +1,16 @@
 h3, p{
-  font-family: "Roboto Condensed", sans-serif;
   color: black !important;
 }
 
 h3 {
   font-size: 2rem;
+  font-weight: 700;
 }
 
 p {
   font-size: 1.4rem;
+}
+
+.bg-secondary{
+  background-color: #C4C4C4;
 }

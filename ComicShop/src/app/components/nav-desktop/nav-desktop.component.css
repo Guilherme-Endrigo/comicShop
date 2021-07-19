@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 #logo {
-  width: 130px;
-  height: 50px;
+  width: 100px;
 }
 
-a {
-  font-family: "Roboto Condensed", sans-serif;
+.nav-link {
   font-size: 19px;
+  font-weight: 700;
 }
 
 mat-icon {
@@ -27,4 +26,21 @@ mat-icon {
 
 nav{
 width: 100vw;
+}
+
+.fa {
+  padding: 15px;
+  color: gray;
+  font-size: 30px;
+}
+
+.fa:hover{
+  background-color: black !important;
+  color:lightgray;
+}
+
+
+.navbar-dark{
+  background-color: black !important;
+
 }

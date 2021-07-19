@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Quadrinho } from '../models/quadrinho.model';
+import { Observable } from 'rxjs';
+import { ComisApiService } from 'src/app/services/comis-api.service';
+import { Quadrinho } from '../../models/quadrinho.model';
 
 @Component({
   selector: 'app-produtos',
@@ -42,9 +44,16 @@ export class ProdutosComponent implements OnInit {
     imgPath: "../../assets/img/capa_exemploHQ.png",
     descricao: "Historia foda dos xman"  }]
   
-  constructor() { }
+  constructor(private comicSvc: ComisApiService) { }
+
+  allQuadrinhos!: Observable<any>;
 
   ngOnInit(): void {
+    this.getComics();
+  }
+
+  getComics() {
+    this.allQuadrinhos = this.comicSvc.getAllComics();
   }
 
 }
