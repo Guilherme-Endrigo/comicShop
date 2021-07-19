@@ -1,9 +1,13 @@
-h3, p{
+h3, p, .nav-link{
   color: black !important;
 }
 
 h3 {
   font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav-link{
   font-weight: 700;
 }
 

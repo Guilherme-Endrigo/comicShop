@@ -7,16 +7,16 @@ footer {
 
 #logo {
   width: 100px;
-  height: 50px;
+  height: 100%;
   float: right !important;
 }
 
-.bi {
+.bi, .fa{
   padding: 15px;
   color: black;
   font-size: 40px;
 }
 
-.bi:hover{
+.bi:hover, .fa:hover{
   color:white;
 }

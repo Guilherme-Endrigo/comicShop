@@ -18,6 +18,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { CharComponent } from './components/char-component/char-component.component';
 import { CharactersComponent } from './components/char-component/characters/characters.component';
 import { BtnCreateAccountComponent } from './components/usuario/btn-create-account/btn-create-account.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { BtnCreateAccountComponent } from './components/usuario/btn-create-accou
     BtnCreateAccountComponent,
     CharComponent,
     CharactersComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
