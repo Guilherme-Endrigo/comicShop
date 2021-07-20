@@ -7,6 +7,7 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   {  path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home/quadrinhos', redirectTo: 'quadrinhos' },
@@ -19,6 +20,37 @@ const routes: Routes = [
 
   { path: 'contato', redirectTo: 'contato' },
 
+=======
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home/quadrinhos',
+    redirectTo: 'quadrinhos',
+  },
+  {
+    path: 'home/personagens',
+    redirectTo: 'personagens',
+  },
+  {
+    path: 'home/contato',
+    redirectTo: 'contato',
+  },
+  {
+    path: 'quadrinhos',
+    redirectTo: 'quadrinhos',
+  },
+  {
+    path: 'personagens',
+    redirectTo: 'personagens',
+  },
+  {
+    path: 'contato',
+    redirectTo: 'contato',
+  },
+>>>>>>> f42c946b945a12c0ac259298f2a15a675e545a7d
   { path: 'home', component: AboutUsComponent },
 
   { path: 'quadrinhos', component: ProdutosComponent },
