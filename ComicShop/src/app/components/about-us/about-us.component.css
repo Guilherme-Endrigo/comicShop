@@ -1,4 +1,6 @@
-h3, p, .nav-link{
+h3,
+p,
+.nav-link {
   color: black !important;
 }
 
@@ -7,14 +9,15 @@ h3 {
   font-weight: 700;
 }
 
-.nav-link{
+.nav-link {
   font-weight: 700;
+  font-size: 20px;
 }
 
 p {
   font-size: 1.4rem;
 }
 
-.bg-secondary{
-  background-color: #C4C4C4;
+.bg-secondary {
+  background-color: #c4c4c4;
 }
