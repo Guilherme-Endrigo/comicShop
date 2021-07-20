@@ -21,6 +21,10 @@ const routes: Routes = [
     redirectTo: 'personagens',
   },
   {
+    path: 'home/contato',
+    redirectTo: 'contato',
+  },
+  {
     path: 'quadrinhos',
     redirectTo: 'quadrinhos',
   },
