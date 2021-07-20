@@ -1,15 +1,16 @@
 <app-carrousel></app-carrousel>
-<section id="about-us" class="py-5 bg-secondary text-black" style="padding: 60px;">
+<section id="about-us" class="py-5 bg-secondary text-black container-fluid" style="padding: 60px;">
 
     <div class="row">
         <div class="col-md-3">
-          
-                <img src="assets/img/sobreNos.png" class="img-fluid" alt="...">
+          <div class="d-flex justify-content-center">
+            <img src="assets/img/sobreNos.png" class="img-fluid" alt="capitan Marvel - Us">
+          </div>
            
         </div>
         <div class="col-md-9 text-justify">
-            <br>
-            <h3 class="pb-0"> SOBRE A GENTE </h3>
+
+            <h3 class="pb-0 mt-5"> SOBRE A GENTE </h3>
             <p class="lead text-muted">
                 Marvel é uma loja especializada em HQs, mangás, board games, card games,
                 e tudo relacionados a cultura geek e pop. Buscando sempre levar para seus clientes o maior
@@ -36,7 +37,7 @@
         <div class="ml-5 mr-5">
             <h3 class="mt-5 float-left">+ MAIS VENDIDOS</h3>
 
-                <img class="img-fluid mt-5" src="../../../assets/img/__vendidos.png" alt="">
+                <img class="img-fluid mt-5" src="../../../assets/img/__vendidos.png" alt="best HQ">
 
             <div class="float-right">
                 <a [routerLinkActive]="['active']" routerLink="quadrinhos" class="nav-link mt-3 mb-5"> + VER MAIS </a>
@@ -44,12 +45,12 @@
         </div>
     </section>
 
-    <div><img class="img-fluid" src="../../../assets/img/topo_quadrinhos.png" alt=""></div>
+    <div><img class="img-fluid" src="../../../assets/img/personagens_topo.png" alt="divisor"></div>
     
     <section class="row">
         <div>
             <div class="ml-5 mr-5">
-                <img class="img-fluid mt-5" src="../../../assets/img/_personagens.png" alt="">
+                <img class="img-fluid mt-5" src="../../../assets/img/_personagens.png" alt="characters">
                 <div class="float-right">
                     <a [routerLinkActive]="['active']" routerLink="personagens" class="nav-link mt-3 mb-5 "> + VER MAIS </a>
                 </div>
