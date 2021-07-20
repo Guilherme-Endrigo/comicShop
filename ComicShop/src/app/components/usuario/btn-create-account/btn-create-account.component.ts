@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, TemplateRef } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Usuario } from 'src/app/models/usuario.model';
@@ -34,11 +34,12 @@ export class BtnCreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = new FormGroup({
-      nome: new FormControl(),
-      email: new FormControl(),
-      senha: new FormControl(),
-      endereco: new FormControl(),
-      dataNascimento: new FormControl()
+      nome: new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(25)]),
+      email: new FormControl(null, [Validators.email, Validators.required]),
+      senha: new FormControl(null, [Validators.required]),
+      //Validators.pattern('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$')
+      endereco: new FormControl(null),
+      dataNascimento: new FormControl(null, [Validators.required])
     })
   }
 
