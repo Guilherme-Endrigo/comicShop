@@ -7,48 +7,30 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home/quadrinhos',
-    redirectTo: 'quadrinhos',
-  },
-  {
-    path: 'home/personagens',
-    redirectTo: 'personagens',
-  },
-  {
-    path: 'quadrinhos',
-    redirectTo: 'quadrinhos',
-  },
-  {
-    path: 'personagens',
-    redirectTo: 'personagens',
-  },
-  {
-    path: 'contato',
-    redirectTo: 'contato',
-  },
+  {  path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  { path: 'home/quadrinhos', redirectTo: 'quadrinhos' },
+
+  { path: 'home/personagens', redirectTo: 'personagens' },
+
+  { path: 'quadrinhos', redirectTo: 'quadrinhos' },
+
+  { path: 'personagens', redirectTo: 'personagens' },
+
+  { path: 'contato', redirectTo: 'contato' },
+
   { path: 'home', component: AboutUsComponent },
-  {
-    path: 'quadrinhos',
-    component: ProdutosComponent,
-  },
-  {
-    path: 'personagens',
-    component: CharComponent,
-  },
-  {
-    path: 'login',
-    component: UsuarioComponent,
-  },
-  {
-    path: 'contato',
-    component: ContactUsComponent,
-  },
+
+  { path: 'quadrinhos', component: ProdutosComponent },
+
+  { path: 'personagens', component: CharComponent },
+
+  { path: 'login', component: UsuarioComponent },
+
+  { path: 'contato', component: ContactUsComponent },
+  
+  { path:"**", redirectTo: '/not-found' }
+  
 ];
 
 @NgModule({
