@@ -14,13 +14,13 @@
               <div class="row">
                   <div class="col-md-6">
                       <fieldset class="form-group">
-                          <label for="nome">nome</label>
+                          <label for="nome">nome:</label>
                           <input type="text" formControlName="nome" class="form-control" style="width: 100%;">
                           <label for="email">email</label>
                           <input type="email" formControlName="email" class="form-control" style="width: 100%;">
-                          <label for="senha">senha</label>
+                          <label for="senha">senha:</label>
                           <input type="password" formControlName="senha" class="form-control" style="width: 100%;">
-                          <label for="endereco">endereço</label>
+                          <label for="endereco">endereço (não Obrigatorio)</label>
                           <input type="text" formControlName="endereco" class="form-control" style="width: 100%;">
                           
                           <label for="dataNascimento">Data de Nascimento</label>
@@ -35,7 +35,7 @@
       </div>
       <div class="modal-footer">
           <div class="container">
-              <button class="btn btn-info" type="submit">cadastrar</button>
+              <button class="btn btn-info" type="submit" [disabled]='createForm.invalid'>cadastrar</button>
               <button type="button" class="btn btn-light ml-2" (click)="closeAccountCreateForm()">Cancelar
               </button>
           </div>
