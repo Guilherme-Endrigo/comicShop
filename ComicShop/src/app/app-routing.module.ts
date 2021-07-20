@@ -7,7 +7,7 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
+
   {  path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home/quadrinhos', redirectTo: 'quadrinhos' },
