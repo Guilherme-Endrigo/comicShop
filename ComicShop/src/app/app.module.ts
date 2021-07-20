@@ -19,7 +19,7 @@ import { CharComponent } from './components/char-component/char-component.compon
 import { CharactersComponent } from './components/char-component/characters/characters.component';
 import { BtnCreateAccountComponent } from './components/usuario/btn-create-account/btn-create-account.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
