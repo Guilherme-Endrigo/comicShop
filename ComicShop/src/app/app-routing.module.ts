@@ -14,6 +14,10 @@ const routes: Routes = [
 
   { path: 'home/quadrinhos', redirectTo: 'quadrinhos' },
 
+  { path: 'not-found/home', redirectTo: 'home' },
+
+  { path: 'not-found/contato', redirectTo: 'contato' },
+
   { path: 'home/personagens', redirectTo: 'personagens' },
 
   { path: 'quadrinhos', redirectTo: 'quadrinhos' },
