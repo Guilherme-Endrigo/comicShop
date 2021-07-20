@@ -14,9 +14,7 @@ const routes: Routes = [
 
   { path: 'home/quadrinhos', redirectTo: 'quadrinhos' },
 
-  { path: 'not-found/home', redirectTo: 'home' },
-
-  { path: 'not-found/contato', redirectTo: 'contato' },
+  { path: 'home/contato', redirectTo: 'contato' },
 
   { path: 'home/personagens', redirectTo: 'personagens' },
 
@@ -37,6 +35,10 @@ const routes: Routes = [
   { path: 'contato', component: ContactUsComponent },
 
   {path: 'not-found', component: PageNotFoundComponent},
+
+  {path: 'not-found/contato', redirectTo: 'contato'},
+
+  {path: 'not-found/home', redirectTo: 'home'},
   
   { path:"**", redirectTo: '/not-found' }
   
