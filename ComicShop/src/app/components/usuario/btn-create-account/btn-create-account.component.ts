@@ -4,6 +4,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Usuario } from 'src/app/models/usuario.model';
 
+
 @Component({
   selector: 'app-btn-create-account',
   templateUrl: './btn-create-account.component.html',
@@ -27,7 +28,7 @@ export class BtnCreateAccountComponent implements OnInit {
   @Output() usuarioCreated = new EventEmitter;
 
   constructor(
-    private bsModalService: BsModalService
+    private bsModalService: BsModalService,
   ) {
     this.dateConfig.containerClass = 'theme-dark-blue';
   }

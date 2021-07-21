@@ -4,12 +4,12 @@
 
   <div class="row">
     <div class="col-md-8">
-        <form action="/post" method="post">
-          <input class="form-control" name="name" placeholder="Nome..." /><br />
-          <input class="form-control" name="phone" placeholder="Telefone..." /><br />
-          <input class="form-control" name="email" placeholder="E-mail..." /><br />
-          <textarea class="form-control" name="text" placeholder="Como podemos ajudar?" style="height:150px;"></textarea><br />
-          <input class="btn btn-dark " type="submit" value="Enviar" /><br /><br />
+        <form [formGroup]="sugestionForm" (ngSubmit)="createSugestion()">
+          <input class="form-control" name="name" formControlName="name" class="form-control" placeholder="Nome..." /><br />
+          <input class="form-control" name="phone" formControlName="phone" class="form-control" placeholder="Telefone..." /><br />
+          <input class="form-control" name="email" formControlName="email" class="form-control" placeholder="E-mail..." /><br />
+          <textarea class="form-control" name="sugestion" formControlName="sugestion" class="form-control" placeholder="Como podemos ajudar?" style="height:150px;"></textarea><br />
+          <input class="btn btn-dark " type="submit" [disabled]='sugestionForm.invalid' value="Enviar" /><br /><br />
         </form>
     </div>
     <div class="col-md-4">
