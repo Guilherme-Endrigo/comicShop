@@ -17,7 +17,7 @@ export class ComisApiService {
   constructor(private http: HttpClient) {}
 
   getAllComics(): Observable<any> {
-    let url = this.urlComics + this.getParams();
+    let url = this.urlComics + 'hasDigitalIssue=true&' + this.getParams();
     return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
   }
 
