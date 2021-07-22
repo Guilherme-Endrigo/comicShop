@@ -30,6 +30,8 @@ const routes: Routes = [
 
   { path: 'personagens', component: CharComponent },
 
+  { path: 'personagens/:nomePersonagem', component: CharComponent },
+
   { path: 'login', component: UsuarioComponent },
 
   { path: 'contato', component: ContactUsComponent },

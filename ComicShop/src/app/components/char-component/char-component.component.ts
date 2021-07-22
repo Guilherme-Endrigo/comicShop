@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CharApiService } from 'src/app/services/char-api.service';
 
@@ -8,7 +9,7 @@ import { CharApiService } from 'src/app/services/char-api.service';
   styleUrls: ['./char-component.component.css'],
 })
 export class CharComponent implements OnInit {
-  constructor(private charSvc: CharApiService) {}
+  constructor(private charSvc: CharApiService, private route: ActivatedRoute) {}
 
   allPersonagens!: Observable<any>;
 
@@ -17,6 +18,7 @@ export class CharComponent implements OnInit {
   }
 
   getPersonagens() {
-    this.allPersonagens = this.charSvc.getAllPersonagens();
+    let nome = this.route.snapshot.paramMap.get('nomePersonagem')!;
+    this.allPersonagens = this.charSvc.getAllPersonagens(nome);
   }
 }

@@ -14,9 +14,19 @@ export class CharApiService {
 
   constructor(private http: HttpClient) {}
 
-  getAllPersonagens(): Observable<any> {
-    let url = this.urlPersonagens + this.getParams();
-    return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
+  getAllPersonagens(nome: string=''): Observable<any> {
+    let url = this.urlPersonagens;
+    
+    if(nome != null){
+      url += 'nameStartsWith='+encodeURI(nome)+'&' + this.getParams();
+     
+      return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
+    } else{
+
+      url = this.urlPersonagens + this.getParams();
+      return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
+    }
+
   }
 
   getParams(): string {

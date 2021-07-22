@@ -20,12 +20,12 @@
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Nome do personagem" aria-label="Search">
-      <a class="nav-link fa fa-search my-2 my-sm-0" type="submit"></a>
+      <input class="form-control mr-sm-2" type="search" placeholder="Nome do personagem" aria-describedby="botaoBusca"
+        aria-label="Search" [(ngModel)]='nomePersonagem' name="nome">
+      <a class="nav-link fa fa-search my-2 my-sm-0" id="botaoBusca" type="submit" (click)="buscarPersonagens()"></a>
     </form>
 
     <a [routerLinkActive]="['active']" routerLink="login" class="nav-link fa fa-user-circle"></a>
 
   </div>
 </nav>
-
