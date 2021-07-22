@@ -20,6 +20,7 @@ import { CharactersComponent } from './components/char-component/characters/char
 import { BtnCreateAccountComponent } from './components/usuario/btn-create-account/btn-create-account.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { BtnGitComponent } from './components/contact-us/btn-git/btn-git.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     CharactersComponent,
     ContactUsComponent,
     PageNotFoundComponent,
+    BtnGitComponent,
   ],
   imports: [
     BrowserModule,
