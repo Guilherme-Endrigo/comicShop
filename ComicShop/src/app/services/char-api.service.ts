@@ -17,7 +17,7 @@ export class CharApiService {
   getAllPersonagens(nome: string=''): Observable<any> {
     let url = this.urlPersonagens;
     
-    if(nome != null){
+    if(nome != ""){
       url += 'nameStartsWith='+encodeURI(nome)+'&' + this.getParams();
      
       return this.http.get<any>(url).pipe(map((data: any) => data.data.results));

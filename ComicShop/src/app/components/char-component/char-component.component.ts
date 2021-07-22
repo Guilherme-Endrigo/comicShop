@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CharApiService } from 'src/app/services/char-api.service';
 
@@ -11,14 +11,17 @@ import { CharApiService } from 'src/app/services/char-api.service';
 export class CharComponent implements OnInit {
   constructor(private charSvc: CharApiService, private route: ActivatedRoute) {}
 
+  nomePersonagem!: string;
   allPersonagens!: Observable<any>;
 
   ngOnInit(): void {
-    this.getPersonagens();
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.nomePersonagem = params.get('nomePersonagem')!;
+      this.getPersonagens(this.nomePersonagem);
+    });
   }
 
-  getPersonagens() {
-    let nome = this.route.snapshot.paramMap.get('nomePersonagem')!;
+  getPersonagens(nome: string) {
     this.allPersonagens = this.charSvc.getAllPersonagens(nome);
   }
 }
