@@ -14,17 +14,19 @@ export class CharApiService {
 
   constructor(private http: HttpClient) {}
 
-  getAllPersonagens(nome: string=''): Observable<any> {
+  getAllPersonagens(nome: string): Observable<any> {
     let url = this.urlPersonagens;
+
+    nome = nome != null ? nome : "";
     
     if(nome != ""){
-      url += 'nameStartsWith='+encodeURI(nome)+'&' + this.getParams();
-     
+      url += 'nameStartsWith='+encodeURI(nome)+'&' + this.getParams();   
       return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
-    } else{
 
+    } else{
       url = this.urlPersonagens + this.getParams();
       return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
+      
     }
 
   }
