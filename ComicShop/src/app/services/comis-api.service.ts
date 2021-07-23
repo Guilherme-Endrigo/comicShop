@@ -31,7 +31,7 @@ export class ComisApiService {
     return params;
   }
 
-  getComic(id:number): Observable<any> {
+  getComic(id:any): Observable<any> {
     let url = this.urlComic + id +'?' + this.getParams();
     return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
   }

@@ -1,17 +1,30 @@
-<button type="button" (click)="getComicCart();openCarShopForm(carShopModalCreateTemplate) " class="btn btn-danger ml-2 float-right" >COMPRAR
+<button type="button" (click)="getComicCart();openCarShopForm(carShopModalCreateTemplate) "
+    class="btn btn-danger ml-2 float-right">COMPRAR
 </button>
 
 <ng-template #carShopModalCreateTemplate>
-    <!-- <div *ngIf="productList.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+    <div *ngIf="productList.length === 0" class="alert alert-info">Your Cart is Empty.</div>
 
-  <ul *ngIf="productList.length > 0" class="list-group">
-    <li class="list-group-item" *ngFor="let item of productList">
-    </li> -->
+    <ul *ngIf="productList.length > 0" class="list-group">
+               <li class="list-group-item" *ngFor="let item of comicId | async">
+            <!-- <div *ngFor="let test of | async" class="card-title mt-3 ml-2">
+               <h5>{{test.title}}</h5> 
+            </div> -->
+
+            <div class="row">
+                <h5>{{item.title}}</h5><h5>{{item.prices[0].price}}</h5>
+            </div>
+
+        </li>
+
+    </ul>
 
     <div class="modal-footer">
         <div class="container">
-            <button type="button" class="btn btn-light  float-right" (click)="buyCarShopForm()">FINALIZAR A COMPRA</button>
-            <button type="button" class="btn btn-light  float-left" (click)="closeCarShopForm()">CONTINUAR COMPRANDO</button>
+            <button type="button" class="btn btn-light  float-right" (click)="buyCarShopForm()">FINALIZAR A
+                COMPRA</button>
+            <button type="button" class="btn btn-light  float-left" (click)="closeCarShopForm()">CONTINUAR
+                COMPRANDO</button>
 
         </div>
     </div>

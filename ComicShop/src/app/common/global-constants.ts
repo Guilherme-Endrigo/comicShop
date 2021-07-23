@@ -1,4 +1,3 @@
 export class GlobalConstants {
-    public static productList: Array<any> = []; 
-   
+    public static productList: Array<any> = [];   
 }
