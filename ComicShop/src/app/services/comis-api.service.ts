@@ -13,6 +13,8 @@ export class ComisApiService {
   private privateKey: string = '0ac65598f1894aedb77d90c676b71eaf5e9df167';
   private urlComics: string =
     'https://gateway.marvel.com:443/v1/public/comics?';
+  private urlComic: string =
+    'https://gateway.marvel.com:443/v1/public/comics/';
 
   constructor(private http: HttpClient) {}
 
@@ -28,4 +30,11 @@ export class ComisApiService {
 
     return params;
   }
+
+  getComic(id:number): Observable<any> {
+    let url = this.urlComic + id +'?' + this.getParams();
+    return this.http.get<any>(url).pipe(map((data: any) => data.data.results));
+  }
+
+
 }

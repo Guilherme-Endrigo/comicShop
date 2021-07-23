@@ -9,7 +9,8 @@
                       <h5 class="card-title mt-3 ml-2">{{quadrinho.title}}</h5>
                       <div class="card-body text-center">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                          <button class="btn btn-danger me-md-2" type="button">COMPRAR</button>
+                    <app-btncomprar [comic]="quadrinho.id"></app-btncomprar>
+                          
                         </div>
                       </div>
                   </div>

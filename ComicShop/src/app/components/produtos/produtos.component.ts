@@ -56,4 +56,6 @@ export class ProdutosComponent implements OnInit {
     this.allQuadrinhos = this.comicSvc.getAllComics();
   }
 
+  
+
 }
