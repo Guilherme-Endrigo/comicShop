@@ -22,6 +22,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BtnGitComponent } from './components/contact-us/btn-git/btn-git.component';
 import { BtnComprarComponent } from './components/produtos/btncomprar/btncomprar.component';
+import { MaisvendidosComponent } from './components/about-us/maisvendidos/maisvendidos.component';
+import { PersonagensComponent } from './components/about-us/personagens/personagens.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { BtnComprarComponent } from './components/produtos/btncomprar/btncomprar
     ContactUsComponent,
     PageNotFoundComponent,
     BtnGitComponent,
-    BtnComprarComponent
+    BtnComprarComponent,
+    MaisvendidosComponent,
+    PersonagensComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+.nav-link {
+  color: black;
+}
+
+.bg-img {
+  background: url("/../../assets/img/personagens_topo.png") no-repeat;
+  background-size: cover;
+  min-height: 100px;
+}
+
+h5 {
+  padding-top: 60px;
+  color: white;
+  padding-left: 40px;
+  font-weight: 700;
+}

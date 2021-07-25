@@ -3,7 +3,7 @@
 <div class="container-fluid py-5 bg-secondary">
     <div class="row">
         <div class="col-md-4">
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-4">
                 <img src="assets/img/logo_marvel_about.png" class="img-fluid mb-5 mr-2" alt="capitan Marvel - Us"
                     style="border-radius: 20px;">
             </div>
@@ -25,37 +25,13 @@
             </p>
 
             <p>
-                <a [routerLinkActive]="['active']" routerLink="contato" class="btn btn-dark my-2 me-2 ">FALE CONOSCO</a>
+                <a [routerLinkActive]="['active']" routerLink="contato" class="btn btn-dark">FALE CONOSCO</a>
             </p>
         </div>
 
     </div>
 </div>
 
+<app-maisvendidos></app-maisvendidos>
 
-<section class="row">
-    <div class="ml-5 mr-5">
-        <h3 class="mt-5 float-left">+ MAIS VENDIDOS</h3>
-
-        <img class="img-fluid mt-5" src="../../../assets/img/__vendidos.png" alt="best HQ">
-
-        <div class="float-right">
-            <a [routerLinkActive]="['active']" routerLink="quadrinhos" class="nav-link mt-3 mb-5"> + VER MAIS </a>
-        </div>
-    </div>
-</section>
-
-<div class="bg-img">
-    <h5>FALE CONOSCO</h5>
-</div>
-
-<section class="row">
-    <div>
-        <div class="ml-5 mr-5">
-            <img class="img-fluid mt-5" src="../../../assets/img/_personagens.png" alt="characters">
-            <div class="float-right">
-                <a [routerLinkActive]="['active']" routerLink="personagens" class="nav-link mt-3 mb-5 "> + VER MAIS </a>
-            </div>
-        </div>
-    </div>
-</section>
+<app-personagens></app-personagens>

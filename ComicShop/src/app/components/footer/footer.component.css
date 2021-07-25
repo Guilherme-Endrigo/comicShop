@@ -11,12 +11,14 @@ footer {
   float: right !important;
 }
 
-.bi, .fa{
-  padding: 15px;
+.bi,
+.fa {
+  padding: 50px;
   color: black;
   font-size: 40px;
 }
 
-.bi:hover, .fa:hover{
-  color:white;
+.bi:hover,
+.fa:hover {
+  color: white;
 }
