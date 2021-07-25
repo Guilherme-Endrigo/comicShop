@@ -3,7 +3,9 @@
 </button>
 
 <ng-template #carShopModalCreateTemplate>
-
+    <div class="modal-header text-center">
+        <h3><span class="bi bi-cart-check" style="font-size: 25px  !important;"></span> CARRINHO DE COMPRAS </h3>
+    </div>
     <div *ngIf="productList.length === 0" class="alert alert-info">Seu carrinho está vazio.</div>
 
     <ul *ngIf="productList.length > 0" class="list-group">

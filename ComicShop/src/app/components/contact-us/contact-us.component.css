@@ -13,3 +13,26 @@ a:hover {
   text-decoration: none;
 }
 
+body{
+  padding-top: 61px !important; 
+}
+
+
+img{
+  min-height: 100px;
+}
+
+
+.bg-img{
+  background: url("../../../assets/img/topo_contact.png") no-repeat;
+  background-size: cover; 
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  margin-bottom: 50px;
+}

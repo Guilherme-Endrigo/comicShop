@@ -1,38 +1,51 @@
-<div class="container mt-5 pt-2  ">
+<body>
 
-  <h4 class="text-left pt-4 mt-5">Contact us</h4><br />
-
-  <div class="row">
-    <div class="col-md-8">
-        <form [formGroup]="sugestionForm" (ngSubmit)="createSugestion()">
-          <input class="form-control" name="name" formControlName="name" class="form-control" placeholder="Nome..." /><br />
-          <input class="form-control" name="phone" formControlName="phone" class="form-control" placeholder="Telefone..." /><br />
-          <input class="form-control" name="email" formControlName="email" class="form-control" placeholder="E-mail..." /><br />
-          <textarea class="form-control" name="sugestion" formControlName="sugestion" class="form-control" placeholder="Como podemos ajudar?" style="height:150px;"></textarea><br />
-          <button class="btn btn-dark " type="submit" [disabled]='sugestionForm.invalid' value="Enviar" >Enviar</button>
-        </form>
-    </div>
-    
-    <div class="col-md-4">
-   <h6 class="ml-5 mt-3"> Fale com a gente!</h6>
-     <p class="col-md-13 text-justify ml-5">
-      Criamos um canal de comunicação com a Marvel dos Quadrinhos. 
-      Reclamações, sugestões, dúvidas, dificuldades encontradas em nosso site,
-      denúncias de usuários que utilizam a Marvel de forma inadequada, bugs, enfim,
-      sinta-se à vontade para usar este formulário e falar conosco.
-      Esperamos seu contato!
-  </p> 
-
-
-     <h6 class=" ml-5"> A Marvel nas redes sociais: </h6> 
-    <div class="row ml-5">
-
-      <a href="http://facebook.com/marvel" target="_blank" class="bi bi-facebook mr-2 mt-3" ></a>
-      <a href="http://twitter.com/marvel"  target="_blank" class="bi bi-twitter mr-2 mt-3"></a>
-      <a href="http://instagram.com/marvel" target="_blank" class="bi bi-instagram mr-2 mt-3"></a>
-      <app-btn-git class="mt-3"></app-btn-git>
-    </div>
-     <p class="mt-3 ml-5 mb-5">Todos os personagens da Marvel ou produtos semelhante(s) da mesma são Marcas Registradas e Direitos Autorais. Copyright © 1941-2017 Marvel Characters, Inc. TODOS OS DIREITOS RESERVADOS.</p>
-
-
+  <div class="bg-img">
+    <h1>FALE CONOSCO</h1>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <form [formGroup]="sugestionForm" (ngSubmit)="createSugestion()">
+          <input class="form-control" name="name" formControlName="name" class="form-control"
+            placeholder="Nome..." /><br />
+          <input class="form-control" name="phone" formControlName="phone" class="form-control"
+            placeholder="Telefone..." /><br />
+          <input class="form-control" name="email" formControlName="email" class="form-control"
+            placeholder="E-mail..." /><br />
+          <textarea class="form-control" name="sugestion" formControlName="sugestion" class="form-control"
+            placeholder="Como podemos ajudar?" style="height:150px;"></textarea><br />
+          <button class="btn btn-dark mb-5" type="submit" [disabled]='sugestionForm.invalid'
+            value="Enviar">Enviar</button>
+        </form>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="ml-5"> Fale com a gente!</h6>
+        <p class="col-md-13 text-justify ml-5">
+          Criamos um canal de comunicação com a Marvel dos Quadrinhos.
+          Reclamações, sugestões, dúvidas, dificuldades encontradas em nosso site,
+          denúncias de usuários que utilizam a Marvel de forma inadequada, bugs, enfim,
+          sinta-se à vontade para usar este formulário e falar conosco.
+          Esperamos seu contato!
+        </p>
+
+
+        <h6 class=" ml-5"> A Marvel nas redes sociais: </h6>
+        <div class="row ml-5">
+
+          <a href="http://facebook.com/marvel" target="_blank" class="bi bi-facebook mr-2 mt-3"></a>
+          <a href="http://twitter.com/marvel" target="_blank" class="bi bi-twitter mr-2 mt-3"></a>
+          <a href="http://instagram.com/marvel" target="_blank" class="bi bi-instagram mr-2 mt-3"></a>
+          <app-btn-git class="mt-3"></app-btn-git>
+        </div>
+        <p class="mt-3 ml-5 mb-5">Todos os personagens da Marvel ou produtos semelhante(s) da mesma são Marcas
+          Registradas
+          e Direitos Autorais. Copyright © 1941-2017 Marvel Characters, Inc. TODOS OS DIREITOS RESERVADOS.</p>
+
+
+      </div>
+    </div>
+  </div>
+</body>

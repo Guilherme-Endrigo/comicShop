@@ -2,6 +2,6 @@ export interface Usuario{
   nome: string,
   email: string,
   senha: number,
-  endereco: string,
+  endereco?: string,
   dataNascimento: string
 }

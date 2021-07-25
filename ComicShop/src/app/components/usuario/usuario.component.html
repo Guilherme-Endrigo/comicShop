@@ -1,31 +1,45 @@
 <div class="container-fluid">
-   <div class="row no-gutter">
-     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-     <div class="col-md-8 col-lg-6">
-       <div class="login d-flex align-items-center py-5">
-         <div class="container">
-           <div class="row mt-5">
-             <div class="col-md-9 col-lg-8 mx-auto mt-5  shadow-lg p-3 mb-5 bg-white rounded mb-5 pb-5 pl-5 pr-5">
-               <h3 class="login-heading mt-5 mb-4 text-center">LOGIN</h3>
-               <form>
-                 <div class="form-label-group">
-                   <input type="email" id="inputEmail" class="form-control" placeholder="insira seu email" required autofocus>
-                 </div>
- 
-                 <div class="form-label-group mt-4 mb-2">
-                   <input type="password" id="inputPassword" class="form-control" placeholder="senha" required>
-                 </div>
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-9 col-lg-8 mx-auto mt-5  shadow-lg p-3 mb-5 bg-white rounded mb-5 pb-5 pl-5 pr-5">
+              <h3 class="login-heading mt-5 mb-4 text-center"  *ngIf="!logado">LOGIN</h3>
+              <h3 class="login-heading mt-5 mb-2 text-center"  *ngIf="logado">Olá, {{usuarioNome}}!</h3>
 
-                 <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">entrar</button>
-                 <div class="text-center">
-                  <app-btn-create-account (clienteCreated)="onUsuarioCreated($event)"></app-btn-create-account>
+
+              <div *ngIf="!logado">
+                <div class="form-label-group">
+                  <input type="email" id="usuarioEmail" class="form-control" [(ngModel)]='usuarioEmail'
+                    placeholder="insira seu email" required autofocus>
                 </div>
-               </form>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- 
+
+                <div class="form-label-group mt-4 mb-2">
+                  <input type="password" id="usuarioSenha" [(ngModel)]='usuarioSenha' class="form-control"
+                    placeholder="senha" required>
+                </div>
+              </div>
+
+              <div class="col text-center" *ngIf="logado">
+                <h5 class="mb-5">Faça boas compras!</h5>
+              </div>
+
+
+              <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="button"
+                *ngIf="!logado" (click)="logar()">entrar</button>
+              <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="button"
+                *ngIf="logado" (click)="deslogar()">Sair</button>
+
+              <div class="text-center">
+                <app-btn-create-account (usuarioCreated)="onUsuarioCreated($event)"></app-btn-create-account>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
