@@ -9,8 +9,8 @@ import { Md5 } from 'ts-md5/dist/md5';
 })
 
 export class ComisApiService {
-  private publicKey = `9ab5fedb49c9d6617eba7fed8e3da3fa`;
-  private privateKey: string = '0ac65598f1894aedb77d90c676b71eaf5e9df167';
+  private publicKey = `dadf708548c33c0f35097c1274a3775e`;
+  private privateKey: string = '88fd93f2455f0ef672734efb5f9b6efed8349fee';
   private urlComics: string =
     'https://gateway.marvel.com:443/v1/public/comics?';
   private urlComic: string =

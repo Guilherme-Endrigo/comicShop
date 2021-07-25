@@ -21,8 +21,7 @@ import { BtnCreateAccountComponent } from './components/usuario/btn-create-accou
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BtnGitComponent } from './components/contact-us/btn-git/btn-git.component';
-import { BtncomprarComponent } from './components/produtos/btncomprar/btncomprar.component';
-import { ShoopingCartComponent } from './components/shooping-cart/shooping-cart.component';
+import { BtnComprarComponent } from './components/produtos/btncomprar/btncomprar.component';
 
 
 @NgModule({
@@ -40,8 +39,7 @@ import { ShoopingCartComponent } from './components/shooping-cart/shooping-cart.
     ContactUsComponent,
     PageNotFoundComponent,
     BtnGitComponent,
-    BtncomprarComponent,
-    ShoopingCartComponent,
+    BtnComprarComponent
   ],
   imports: [
     BrowserModule,

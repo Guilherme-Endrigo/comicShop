@@ -1,28 +1,37 @@
-<button type="button" (click)="getComicCart();openCarShopForm(carShopModalCreateTemplate) "
+<button type="button" (click)="getComicCart();openCarShopForm(carShopModalCreateTemplate)"
     class="btn btn-danger ml-2 float-right">COMPRAR
 </button>
 
 <ng-template #carShopModalCreateTemplate>
-    <div *ngIf="productList.length === 0" class="alert alert-info">Your Cart is Empty.</div>
+
+    <div *ngIf="productList.length === 0" class="alert alert-info">Seu carrinho está vazio.</div>
 
     <ul *ngIf="productList.length > 0" class="list-group">
-               <li class="list-group-item" *ngFor="let item of comicId | async">
-            <!-- <div *ngFor="let test of | async" class="card-title mt-3 ml-2">
-               <h5>{{test.title}}</h5> 
-            </div> -->
+        <li class="list-group-item" *ngFor="let comic of productList">
+            <div class="row" id="itens">
 
-            <div class="row">
-                <h5>{{item.title}}</h5><h5>{{item.prices[0].price}}</h5>
+                <h5 class="ml-3">{{comic.title}} | ${{comic.prices[0].price}}
+                    <a class="ml-2 fa fa-trash" (click)="removePedido(comic)" style="font-size: 18px  !important;"></a>
+                </h5>
+
+                <div id="quantidade">
+                    <div class="input-group-prepend">
+                        <a class="btn fa fa-minus" type="button" (click)="alterarQtd(comic, comic.quantidade - 1)"></a>
+                    </div>
+                    <input type="text" disabled [ngModel]="comic.quantidade">
+                    <div class="input-group-append">
+                        <a class="btn fa fa-plus" type="button" (click)="alterarQtd(comic, comic.quantidade + 1)"></a>
+                    </div>
+                </div>
+
             </div>
-
         </li>
-
     </ul>
 
     <div class="modal-footer">
         <div class="container">
             <button type="button" class="btn btn-light  float-right" (click)="buyCarShopForm()">FINALIZAR A
-                COMPRA</button>
+                COMPRA ({{getTotal()}})</button>
             <button type="button" class="btn btn-light  float-left" (click)="closeCarShopForm()">CONTINUAR
                 COMPRANDO</button>
 

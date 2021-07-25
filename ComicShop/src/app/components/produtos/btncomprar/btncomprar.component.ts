@@ -1,7 +1,7 @@
+import { formatCurrency } from '@angular/common';
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Observable } from 'rxjs';
+import { Comic } from 'src/app/models/quadrinho.model';
 import { ComisApiService } from 'src/app/services/comis-api.service';
 import { GlobalConstants } from '../../../common/global-constants';
 
@@ -10,14 +10,12 @@ import { GlobalConstants } from '../../../common/global-constants';
   templateUrl: './btncomprar.component.html',
   styleUrls: ['./btncomprar.component.css'],
 })
-export class BtncomprarComponent implements OnInit {
+export class BtnComprarComponent implements OnInit {
   @Input()
-  comic: any;
+  comic!: Comic;
 
-  comicId!: Observable<any[]>;
   productList = GlobalConstants.productList;
   cartFormBsModalRef!: BsModalRef;
-  listItens: Array<any> = [];
 
   constructor(
     public comicSvc: ComisApiService,
@@ -27,29 +25,45 @@ export class BtncomprarComponent implements OnInit {
   ngOnInit(): void {}
 
   getComicCart() {
+    let index = this.productList.findIndex(
+      (comicPedido) => comicPedido.id == this.comic.id
+    );
 
-    this.comicId = this.comicSvc.getComic(this.comic)
-    GlobalConstants.productList.push(this.comic); //lembrando que aqui tem que trocar o this.productList por uma variável global
-
-
+    if (index > -1) {
+      this.productList[index].quantidade++;
+    } else {
+      this.comic.quantidade = 1;
+      this.productList.push(this.comic);
+    }
   }
 
-  listComics() {
+  alterarQtd(comic: Comic, quantidade: number): void {
+    if (quantidade < 1) {
+      quantidade = 1;
+    }
+    comic.quantidade = quantidade;
+  }
 
-    // // this.productList.push(this.comic); //lembrando que aqui tem que trocar o this.productList por uma variável global
+  removePedido(comic: Comic): void {
+    let index = this.productList.findIndex(
+      (comicPedido) => comicPedido.id == comic.id
+    );
 
-    // // this.productList.forEach((element) => {
-    // // this.comicId = this.comicSvc.getComic(element);
-    // // this.listItens.push(this.comicId);
-    // // });
+    if (index > -1) {
+      this.productList.splice(index, 1);
+    }
+  }
 
-    // this.listItens.push(test);
-    // this.listItens.forEach((element) => {
-    //   this.comicId = this.comicSvc.getComic(element);
-    // });
+  getTotal(): string {
+    let total: number = 0;
 
-    // return this.comicId;
+    this.productList.forEach((comic) => {
+      let precoComic = comic.prices[0].price * comic.quantidade;
 
+      total += precoComic;
+    });
+
+    return formatCurrency(total, 'en-us', '$');
   }
 
   openCarShopForm(template: TemplateRef<any>) {
@@ -61,6 +75,7 @@ export class BtncomprarComponent implements OnInit {
   }
 
   buyCarShopForm(): void {
+    this.productList.splice(0, this.productList.length);
     alert('Compra realizada com sucesso!');
     this.cartFormBsModalRef.hide();
   }
