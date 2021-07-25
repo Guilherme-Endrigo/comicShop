@@ -10,3 +10,7 @@ p {
 .bg-secondary {
   background-color: #161b22 !important;
 }
+
+body{
+  padding-top: -8px !important;
+}

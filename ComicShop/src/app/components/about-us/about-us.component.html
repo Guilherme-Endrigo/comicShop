@@ -1,37 +1,39 @@
-<app-carrousel></app-carrousel>
+<body>
+    <app-carrousel></app-carrousel>
 
-<div class="container-fluid py-5 bg-secondary">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="d-flex justify-content-center mt-4">
-                <img src="assets/img/logo_marvel_about.png" class="img-fluid mb-5 mr-2" alt="capitan Marvel - Us"
-                    style="border-radius: 20px;">
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-flex justify-content-center mt-4">
+                    <img src="assets/img/logo_marvel_about.png" class="img-fluid mb-5 mr-2" alt="capitan Marvel - Us"
+                        style="border-radius: 20px;">
+                </div>
             </div>
+            <div class="col-md-8 mt-4">
+                <h4>SOBRE A GENTE</h4>
+                <p class="lead text-muted mt-3">
+                    Marvel é uma loja especializada em HQs, mangás, board games, card games,
+                    e tudo relacionados a cultura geek e pop. Buscando sempre levar para seus clientes o maior
+                    e mais atualizado acervo de revistas em quadrinhos do Brasil. Nosso objetivo é pensar sempre no
+                    consumidor,
+                    fomentar o mercado e aproximar cada vez mais o público do maravilhoso universo das histórias em
+                    quadrinhos.
+                    Para isso, foram criadas diversas ações de divulgação como eventos internos, lançamentos, ações em
+                    escolas,
+                    faculdades, feiras de livros entre outros. Disponibilizando sempre uma equipe treinada, com muito
+                    carisma,
+                    potencial e conhecimento para propor ao cliente a devida atenção e atendimento.
+                </p>
+    
+                <p>
+                    <a [routerLinkActive]="['active']" routerLink="contato" class="btn btn-dark">FALE CONOSCO</a>
+                </p>
+            </div>
+    
         </div>
-        <div class="col-md-8 mt-4">
-            <h4>SOBRE A GENTE</h4>
-            <p class="lead text-muted mt-3">
-                Marvel é uma loja especializada em HQs, mangás, board games, card games,
-                e tudo relacionados a cultura geek e pop. Buscando sempre levar para seus clientes o maior
-                e mais atualizado acervo de revistas em quadrinhos do Brasil. Nosso objetivo é pensar sempre no
-                consumidor,
-                fomentar o mercado e aproximar cada vez mais o público do maravilhoso universo das histórias em
-                quadrinhos.
-                Para isso, foram criadas diversas ações de divulgação como eventos internos, lançamentos, ações em
-                escolas,
-                faculdades, feiras de livros entre outros. Disponibilizando sempre uma equipe treinada, com muito
-                carisma,
-                potencial e conhecimento para propor ao cliente a devida atenção e atendimento.
-            </p>
-
-            <p>
-                <a [routerLinkActive]="['active']" routerLink="contato" class="btn btn-dark">FALE CONOSCO</a>
-            </p>
-        </div>
-
     </div>
-</div>
-
-<app-maisvendidos></app-maisvendidos>
-
-<app-personagens></app-personagens>
+    
+    <app-maisvendidos></app-maisvendidos>
+    
+    <app-personagens></app-personagens>
+</body>
