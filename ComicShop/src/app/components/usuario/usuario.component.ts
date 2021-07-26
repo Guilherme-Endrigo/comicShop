@@ -14,7 +14,6 @@ export class UsuarioComponent implements OnInit {
   public usuarioNome!: string;
   public usuarioSenha!: number;
   public logado: boolean = false;
-  public existe: boolean = false;
 
   constructor() {}
 

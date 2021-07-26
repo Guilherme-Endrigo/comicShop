@@ -18,3 +18,23 @@ h5 {
 img {
   min-height: 300px;
 }
+
+.vermelhoMarvel {
+  color: #ed1d24;
+}
+
+.spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 50%;
+  right: 50%;
+  margin-top: -49px;
+  margin-right: -50px;
+  height: 100px;
+  width: 100px;
+}
+
+.spin {
+  text-align: center!important;
+}

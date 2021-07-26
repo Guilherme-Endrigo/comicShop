@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Comic } from 'src/app/models/quadrinho.model';
 import { ComisApiService } from 'src/app/services/comis-api.service';
 @Component({
   selector: 'app-produtos',
@@ -9,14 +10,19 @@ import { ComisApiService } from 'src/app/services/comis-api.service';
 export class ProdutosComponent implements OnInit {
   constructor(public comicSvc: ComisApiService) {}
 
-  allQuadrinhos!: Observable<any>;
+  allQuadrinhos!: Comic[];
+  public carregado: boolean = false;
 
   ngOnInit(): void {
+    this.carregado = false;
     this.getComics();
+
   }
 
   getComics() {
-    this.allQuadrinhos = this.comicSvc.getAllComics();
+    this.comicSvc.getAllComics().subscribe((comics) => {
+      this.carregado = true;
+      this.allQuadrinhos = comics;
+    });
   }
-
 }

@@ -2,23 +2,35 @@
     <div class="container mx-auto">
         <div class="mt-5">
             <h2 class="text-center">QUADRINHOS</h2>
-            <div class="row">
-                <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" class="col-md-4"
-                    *ngFor="let quadrinho of allQuadrinhos | async">
-                    <div class="card mt-4 hq-card">
-                        <img class="card-img-top img-responsive mt-5"
-                            src={{quadrinho.thumbnail.path}}.{{quadrinho.thumbnail.extension}}>
-                        <h5 class="card-title mt-3 ml-2">{{quadrinho.title}}</h5>
-                        <div class="card-body text-center">
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                
-                                <app-btncomprar [comic]="quadrinho"></app-btncomprar>
 
+            <div *ngIf="!carregado" class="spin">
+
+                <div class="spinner-border spinner vermelhoMarvel">
+                    <span class="sr-only">Loading...</span>
+                </div>
+
+            </div>
+
+            <div *ngIf="carregado" class="spin">
+                <div class="row">
+                    <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" class="col-md-4"
+                        *ngFor="let quadrinho of allQuadrinhos">
+                        <div class="card mt-4 hq-card">
+                            <img class="card-img-top img-responsive mt-5"
+                                src={{quadrinho.thumbnail.path}}.{{quadrinho.thumbnail.extension}}>
+                            <h5 class="card-title mt-3 ml-2">{{quadrinho.title}}</h5>
+                            <div class="card-body text-center">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                                    <app-btncomprar [comic]="quadrinho"></app-btncomprar>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
