@@ -38,7 +38,6 @@ export class BtnCreateAccountComponent implements OnInit {
       ]),
       email: new FormControl(null, [Validators.email, Validators.required]),
       senha: new FormControl(null, [Validators.required]),
-      //Validators.pattern('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$')
       endereco: new FormControl(null),
       dataNascimento: new FormControl(null, [Validators.required]),
     });
