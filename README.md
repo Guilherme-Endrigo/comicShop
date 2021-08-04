@@ -35,12 +35,11 @@ Após essa etapa foi pensado nas funcionalidades que poderiam ser mais interessa
  
 - Para visualizar o projeto no browser, insira no terminal o comando ng serve --open.  
 
-##Version 
+## Version 
 1.0 
 
 
 <img align="left" width="500" height="400" src="https://github.com/Guilherme-Endrigo/comicShop/blob/main/docs/CartQuadrinho.png">
-https://github.com/Guilherme-Endrigo/comicShop/tree/main/docs
 
 ## Authors 
  
