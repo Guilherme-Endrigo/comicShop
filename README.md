@@ -1,7 +1,7 @@
 
-##ComicShop_ Marvel
+## ComicShop_ Marvel
 
-<img align="right" width="400" height="700" src="https://github.com/Guilherme-Endrigo/comicShop/blob/main/INDEX_figma.png">
+<img align="right" width="400" height="700" src="https://github.com/Guilherme-Endrigo/comicShop/blob/main/docs/INDEX_figma.png">
 
 
 
@@ -19,7 +19,7 @@ Após essa etapa foi pensado nas funcionalidades que poderiam ser mais interessa
  
 - Formulários de criação de conta e simulação de login com a conta previamente criada (Com armazenamento da conta criada localmente, devido a proposta de desenvolvimento em front-end). 
  
-##Tecnologias 
+## Tecnologias 
  
 - Angular 12.1.2  
 - Typescript 4.3.2 
@@ -27,7 +27,7 @@ Após essa etapa foi pensado nas funcionalidades que poderiam ser mais interessa
 - Ngx-Bootstrap 6.2.0 
 
 
-##Como consumir esse projeto? 
+## Como consumir esse projeto? 
  
 - Git clone. 
  
@@ -39,9 +39,10 @@ Após essa etapa foi pensado nas funcionalidades que poderiam ser mais interessa
 1.0 
 
 
-<img align="left" width="500" height="400" src="https://github.com/Guilherme-Endrigo/comicShop/blob/main/CartQuadrinho.png">
+<img align="left" width="500" height="400" src="https://github.com/Guilherme-Endrigo/comicShop/blob/main/docs/CartQuadrinho.png">
+https://github.com/Guilherme-Endrigo/comicShop/tree/main/docs
 
-##Authors 
+## Authors 
  
 Entre em contato com os realizadores do projeto para mais informações: 
  Guilherme - https://github.com/Guilherme-Endrigo 
